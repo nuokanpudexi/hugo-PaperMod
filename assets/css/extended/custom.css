@@ -1,8 +1,24 @@
-/* ==================== 1. 设置全局背景图片 ==================== */
+/* 1. 强制覆盖 body 背景图并提升优先级 */
 body {
-    background-image: url('/images/007.jpg'); /* 替换为你的图片路径或网络链接 */
-    background-size: cover;                  /* 铺满整个屏幕 */
-    background-repeat: no-repeat;            /* 不重复 */
-    background-attachment: fixed;            /* 背景固定，滚动页面时背景不动 */
-    background-position: center;             /* 居中显示 */
+    background-image: url('/images/007.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+}
+
+/* 2. 将主页面和容器的纯色背景设为透明，防止挡住背景图 */
+:root, body, .list, .page, #top {
+    background-color: transparent !important;
+}
+
+/* 3. (可选) 给文章卡片和导航栏加上半透明毛玻璃背景，确保文字看得清 */
+.post-entry, .post-single, .header, .footer {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(8px);
+}
+
+.dark .post-entry, .dark .post-single, .dark .header, .dark .footer {
+    background: rgba(30, 30, 30, 0.85) !important;
+    backdrop-filter: blur(8px);
 }
