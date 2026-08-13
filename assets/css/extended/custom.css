@@ -1,24 +1,22 @@
-/* 1. 强制覆盖 body 背景图并提升优先级 */
-body {
-    background-image: url('/images/007.jpg') !important;
+/* 1. 设置 html 和 body 全局背景图 */
+html, body {
+    background: url('/images/007.jpg') no-repeat center center fixed !important;
     background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-attachment: fixed !important;
-    background-position: center !important;
 }
 
-/* 2. 将主页面和容器的纯色背景设为透明，防止挡住背景图 */
-:root, body, .list, .page, #top {
-    background-color: transparent !important;
+/* 2. 仅将页面主体背景设为透明，避免遮挡背景图 */
+.list, .main, .post-single {
+    background: transparent !important;
 }
 
-/* 3. (可选) 给文章卡片和导航栏加上半透明毛玻璃背景，确保文字看得清 */
-.post-entry, .post-single, .header, .footer {
-    background: rgba(255, 255, 255, 0.85) !important;
-    backdrop-filter: blur(8px);
+/* 3. 给导航栏、页脚和文章卡片单独加上半透明白色背景，保证文字清晰 */
+.header, .footer, .post-entry, .post-single {
+    background: rgba(255, 255, 255, 0.88) !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.dark .post-entry, .dark .post-single, .dark .header, .dark .footer {
-    background: rgba(30, 30, 30, 0.85) !important;
-    backdrop-filter: blur(8px);
+/* 4. 深色模式适配 */
+.dark .header, .dark .footer, .dark .post-entry, .dark .post-single {
+    background: rgba(30, 30, 30, 0.88) !important;
 }
