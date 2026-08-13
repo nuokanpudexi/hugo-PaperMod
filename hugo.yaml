@@ -1,0 +1,32 @@
+baseURL: "https://blog.shounishinano.uk/"
+title: "Shoun's Blog"
+languageCode: "zh-tw"
+theme: "PaperMod"
+
+params:
+  env: production
+  title: "Shoun's Blog"
+  description: "Shoun 的個人博客"
+  author: "Shoun"
+  
+  # 首頁歡迎語與簡介
+  homeInfoParams:
+    Title: "👋 歡迎來到 Shoun 的博客"
+    Content: "這裡是我的個人空間，記錄網絡技術、隨筆與日常。"
+
+  # 社群連結圖標
+  socialIcons:
+    - name: "x"
+      url: "https://x.com/"
+    - name: "github"
+      url: "https://github.com/nuokanpudexi"
+
+# 頂部導航菜單
+menu:
+  main:
+    - name: "文章"
+      url: "posts/"
+      weight: 10
+    - name: "搜尋"
+      url: "search/"
+      weight: 20
