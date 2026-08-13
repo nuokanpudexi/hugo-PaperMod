@@ -1,0 +1,8 @@
+/* ==================== 1. 设置全局背景图片 ==================== */
+body {
+    background-image: url('/images/007.jpg'); /* 替换为你的图片路径或网络链接 */
+    background-size: cover;                  /* 铺满整个屏幕 */
+    background-repeat: no-repeat;            /* 不重复 */
+    background-attachment: fixed;            /* 背景固定，滚动页面时背景不动 */
+    background-position: center;             /* 居中显示 */
+}
